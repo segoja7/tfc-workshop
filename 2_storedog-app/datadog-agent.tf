@@ -107,3 +107,13 @@ resource "helm_release" "datadog_agent" {
 
 }
 
+resource "helm_release" "crossplane" {
+  name       = "crossplane-stable"
+  chart      = "crossplane"
+  repository = "https://charts.crossplane.io/stable/"
+#  version    = "3.25.5"
+  namespace        = "crossplane-system"
+  create_namespace = true
+
+}
+
