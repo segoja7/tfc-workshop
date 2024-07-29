@@ -41,3 +41,10 @@ resource "kubernetes_namespace" "storedog" {
     name = var.application_name
   }
 }
+
+#Create the Kubernetes Namespace for the application + Datadog
+resource "kubernetes_namespace" "crossplane-system" {
+  metadata {
+    name = "crossplane-system"
+  }
+}

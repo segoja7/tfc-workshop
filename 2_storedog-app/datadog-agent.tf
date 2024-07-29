@@ -112,8 +112,7 @@ resource "helm_release" "crossplane" {
   chart      = "crossplane"
   repository = "https://charts.crossplane.io/stable/"
 #  version    = "3.25.5"
-  namespace        = "crossplane-system"
-  create_namespace = true
-
+  namespace        = kubernetes_namespace.crossplane-system.id
+  create_namespace = false
 }
 
