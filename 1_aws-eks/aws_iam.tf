@@ -7,7 +7,7 @@ module "ack-role-for-service-accounts-eks" {
   role_policy_arns = {
     AdministratorAccess = "arn:aws:iam::aws:policy/AdministratorAccess"
   }
-
+  assume_role_condition_test = "StringLike"
   oidc_providers = {
     ex = {
       provider_arn = module.eks.oidc_provider_arn
