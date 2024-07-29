@@ -1,6 +1,9 @@
 ##-----------------------------------------##
 ##      Create Datadog SLO for Storedog      ##
 ## ----------------------------------------##
+
+# They measure a target percentage of a metric over time to track how well a service is meeting its obligation to its consumers.
+
 resource "datadog_service_level_objective" "storedog_uptime" {
   depends_on = [
     datadog_synthetics_test.eCommerce

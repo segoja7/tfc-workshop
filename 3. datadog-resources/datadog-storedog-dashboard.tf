@@ -1,3 +1,4 @@
+#metrics for the Storedog application.
 resource "datadog_dashboard" "storedog_dashboard" {
   layout_type  = "ordered"
   reflow_type  = "fixed"

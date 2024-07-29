@@ -153,3 +153,5 @@ resource "datadog_monitor" "postgres_latency" {
   timeout_h            = "0"
   type                 = "metric alert"
 }
+
+#In Datadog, monitors can be created to track any part of an application to detect changes in behavior or performance that you should be alerted to. For example, you can create a monitor to track the number of requests to a specific endpoint over a period of time, or you can create a monitor to track the number of errors that occur on a specific endpoint.
